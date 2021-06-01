@@ -1,4 +1,4 @@
-class addData {
+class AddData {
   constructor(base) {
     this.base = base;
   }
@@ -16,4 +16,4 @@ class addData {
     await fetch(this.base, options);
   }
 }
-export default addData;
+export default AddData;

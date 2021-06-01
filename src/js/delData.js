@@ -1,4 +1,4 @@
-class delData {
+class DelData {
   constructor(base) {
     this.base = base;
   }
@@ -9,4 +9,4 @@ class delData {
     await fetch(this.base + '/' + id, options);
   }
 }
-export default delData;
+export default DelData;

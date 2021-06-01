@@ -2,14 +2,14 @@ import './sass/main.scss';
 import { BASE_URL } from './js/optionsApiServise';
 import todoTemp from './temp/todoTemp.hbs';
 import FetchData from './js/getApiServise';
-import addData from './js/addData';
-import delData from './js/delData';
-import editData from './js/editData';
+import AddData from './js/addData';
+import DelData from './js/delData';
+import EditData from './js/editData';
 
 const FetchEntry = new FetchData(BASE_URL);
-const addEntry = new addData(BASE_URL);
-const delEntry = new delData(BASE_URL);
-const editEntry = new editData(BASE_URL);
+const AddEntry = new AddData(BASE_URL);
+const DelEntry = new DelData(BASE_URL);
+const EditEntry = new EditData(BASE_URL);
 
 const printApp = () => FetchEntry.fetch().then(render).catch(console.log);
 printApp();
@@ -36,12 +36,12 @@ function onAddBtnClick(e) {
 async function onModalBtnClick() {
   const value = document.querySelector('.modal-input').value;
   document.querySelector('.modal').setAttribute('hidden', '');
-  await addEntry.post(value);
+  await AddEntry.post(value);
   printApp();
 }
 async function onDelBtnClick(e) {
   const id = e.currentTarget.dataset.id;
-  await delEntry.del(id);
+  await DelEntry.del(id);
   printApp();
 }
 function onEditBtnClick(e) {
@@ -55,6 +55,6 @@ function onEditBtnClick(e) {
 }
 async function onEditModalBtnClick(id) {
   const value = document.querySelector('.modal-input').value;
-  await editEntry.patch(id, value);
+  await EditEntry.patch(id, value);
   printApp();
 }
