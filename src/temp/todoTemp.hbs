@@ -1,0 +1,15 @@
+{{#each this}}
+<div class="js-to-do-item">
+    <p>{{id}}</p>
+    <p data-id="{{id}}">{{entry}}</p>
+    <div class="btn-container">
+        <button class="del-btn"type="button" data-id="{{id}}">delete</button>
+        <button class="edit-btn" type="button" data-id="{{id}}">edit</button>
+    </div>
+</div>
+{{/each}}
+<button class="add-btn"type="button">добавить</button>
+<div class="modal" hidden>
+    <input class="modal-input" type="text">
+    <button class="modal-btn">добавить</button>
+</div>

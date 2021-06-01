@@ -1,0 +1,24 @@
+.js-to-do-item {
+  display: flex;
+  margin-right: 30px;
+  align-items: center;
+  justify-content: space-around;
+  width: 500px;
+  margin: 0 auto;
+}
+.add-btn {
+  display: block;
+  margin: 0 auto;
+}
+.modal {
+  top: 50px;
+  left: 50%;
+  transform: translate(-50%);
+  position: absolute;
+  padding: 10px;
+  width: 300px;
+  border: 3px solid black;
+  margin: 0 auto;
+  margin-top: 30px;
+  background-color: teal;
+}
